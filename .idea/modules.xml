@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Spring6.iml" filepath="$PROJECT_DIR$/Spring6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring6-001-revelation.iml" filepath="$PROJECT_DIR$/spring6-001-revelation.iml" />
     </modules>
   </component>
 </project>
