@@ -48,5 +48,35 @@
    5. 依赖：A对象和B对象之间的关系
    6. 注入：是一种手段，可以让A对象和B对象产生关系
 
-5. 
+5. Spring 5之后有了**八大模块**
+
+   1. Spring Core
+      1. 实现了控制反转IoC
+   2. Spring AOP
+      1. 面向切面编程，基于Spring IOC
+   3. Spring DAO
+      1. Spring自带的持久化层工具
+   4. Spring ORM
+      1. 用于集成外部的ORM工具Mybatis, hibernate 等
+   5. Spring Web MVC
+      1. 自带的MVC工具：SSM的最后一环
+   6. Spring Webflux
+      1. Spring提供的响应式框架：Spring6更新的产物
+   7. Spring Web
+      1. 支持集成常见的MVC框架，类似于MVC框架的Spring ORM，可以支持structs，webwork等
+   8. Spring Context
+      1. 国际化消息等的支持
+
+6. Spring的特点：
+
+   1. 轻量
+      1. 体积小
+      2. 非侵入式的，不需要依赖别的框架
+   2. 控制反转
+      1. 
+   3. 面向切面
+   4. 容器
+   5. 框架
+
+7. 
 
