@@ -1,29 +1,7 @@
-# Spring依赖注入
-
-service调用Dao的方法，此时由于我们试图实现依赖倒置原则（DIP），使用Spring框架执行IoC，必须使用依赖注入
-
-### Set注入
-
-1. 在service中实现一个set方法
-2. 想让spring调用set方法，要在service的bean配置中加入子标签， name="userDao"，调用的是Set方法而**不是**类名
-
-```xml
-
-    <bean class="com.yty.spring.dao.Impl.MySQLDaoImpl" id="userDaoBean"/>
-    <bean class="com.yty.spring.service.Impl.UserServiceImpl" id="userServiceBean">
-        <!-- configure property child tag
-             name set method without "set" and lower first letter
-             SetUserDao to userDao
-             ref: id of the Dao bean-->
-        <property name="userDao" ref="userDaoBean"/>
-    </bean>
-```
-
-### 构造注入
-
-1. 调用构造方法
-
-```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="MySQLDaoBean" class="com.yty.spring.dao.Impl.MySQLDaoImpl"/>
     <bean id="OracleDaoBean" class="com.yty.spring.dao.Impl.OracleDaoImpl"/>
     <bean id="customerServiceBean" class="com.yty.spring.service.Impl.CustomerServiceImpl">
@@ -34,8 +12,6 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
         <constructor-arg index="1" ref="OracleDaoBean"/>
     </bean>
 
-<!-- or -->
-
     <bean id="customerServiceBean2" class="com.yty.spring.service.Impl.CustomerServiceImpl">
         <!--constructor injection
             name: attribute name in construct method(can be finished IDEA)
@@ -44,14 +20,12 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
         <constructor-arg name="oracleDao" ref="OracleDaoBean"/>
     </bean>
 
-<!-- or -->
     <bean id="customerServiceBean3" class="com.yty.spring.service.Impl.CustomerServiceImpl">
         <!--constructor injection
             can be used without name or id
-            ref: bean id-->
+            ref: bean id
+            spring can finish this according to the type of param-->
         <constructor-arg ref="MySQLDaoBean"/>
         <constructor-arg  ref="OracleDaoBean"/>
     </bean>
-```
-
-2. 
+</beans>
