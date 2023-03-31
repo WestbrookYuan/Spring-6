@@ -11,10 +11,5 @@
         <module name="spring6-002-first" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="spring6-001-revelation" target="17" />
-      <module name="spring6-002-first" target="17" />
-      <module name="spring6-003-dependency-injection" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

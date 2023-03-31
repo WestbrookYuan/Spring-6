@@ -23,7 +23,8 @@
     <bean id="customerServiceBean3" class="com.yty.spring.service.Impl.CustomerServiceImpl">
         <!--constructor injection
             can be used without name or id
-            ref: bean id-->
+            ref: bean id
+            spring can finish this according to the type of param-->
         <constructor-arg ref="MySQLDaoBean"/>
         <constructor-arg  ref="OracleDaoBean"/>
     </bean>

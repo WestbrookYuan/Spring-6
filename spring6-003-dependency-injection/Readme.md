@@ -55,3 +55,65 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
 ```
 
 2. 
+
+### Set注入的小细节
+
+1. 内部Bean和外部Bean
+
+   ```xml
+       <!--define a bean-->
+       <bean id="orderDaoBean" class="com.yty.spring.dao.OrderDao"/>
+   
+       <!--if using ref: outside Bean-->
+       <bean id="orderServiceBean" class="com.yty.spring.service.OrderService">
+           <property name="orderDao" ref="orderDaoBean"/>
+       </bean>
+   
+       <!--inside Bean-->
+       <bean id="orderServiceBean2" class="com.yty.spring.service.OrderService">
+       <!--property can include bean tag to use inside bean-->
+           <property name="orderDao">
+               <bean class="com.yty.spring.dao.OrderDao"/>
+           </property>
+       </bean>
+   ```
+
+2. 注入简单类型
+
+   1. 使用value attribute
+
+      ```xml
+          <!--basic data type set inject-->
+          <bean id="userBean" class="com.yty.spring.bean.User">
+              <!--use value attribute-->
+              <property name="name" value="zhangsan"/>
+              <property name="age" value="15"/>
+              <property name="password" value="12345678"/>
+          </bean>
+      ```
+
+   2. Spring认为的简单类型：
+
+      1. BeanUtils类中的isSimple方法
+
+         ```java
+                 return Void.class != type && Void.TYPE != type && (ClassUtils.isPrimitiveOrWrapper(type) || Enum.class.isAssignableFrom(type) || CharSequence.class.isAssignableFrom(type) || Number.class.isAssignableFrom(type) || Date.class.isAssignableFrom(type) || Temporal.class.isAssignableFrom(type) || URI.class == type || URL.class == type || Locale.class == type || Class.class == type);
+         
+         ```
+
+      2. isPrimitiveOrWrapper，是否是包装类或基本数据类型
+
+      3. Enum、CharSequencNumber、Date、Termporal(时区)、Number、Date、URI、URL、Locale(语言)
+
+      4. Date类型的**特殊处理**
+
+         1. 无法直接把字符串转为Date（如果看成简单类型）
+         2. 标准格式可以：Fri Mar 31 11:06:39 CDT 2023
+         3. 所以实际开发过程中通常认为date不是简单类型
+
+3. 经典应用：
+
+   1. Java.sql.datasource
+
+4. 级联注入
+

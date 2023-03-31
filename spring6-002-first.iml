@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+<module version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration>
@@ -12,29 +12,5 @@
         </fileset>
       </configuration>
     </facet>
-  </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17">
-    <output url="file://$MODULE_DIR$/spring6-002-first/target/classes" />
-    <output-test url="file://$MODULE_DIR$/spring6-002-first/target/test-classes" />
-    <content url="file://$MODULE_DIR$/spring6-002-first">
-      <sourceFolder url="file://$MODULE_DIR$/spring6-002-first/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/spring6-002-first/src/main/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/spring6-002-first/src/test/java" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/spring6-002-first/target" />
-    </content>
-    <orderEntry type="jdk" jdkName="17" jdkType="JavaSDK" />
-    <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-context:6.0.0-M2" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-aop:6.0.0-M2" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-beans:6.0.0-M2" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-core:6.0.0-M2" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-jcl:6.0.0-M2" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-expression:6.0.0-M2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.13.2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-core:2.19.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.19.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-slf4j2-impl:2.19.0" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:2.0.0" level="project" />
   </component>
 </module>

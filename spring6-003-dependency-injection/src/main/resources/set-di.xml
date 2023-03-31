@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--define a bean-->
+    <bean id="orderDaoBean" class="com.yty.spring.dao.OrderDao"/>
+
+    <!--if using ref: outside Bean-->
+    <bean id="orderServiceBean" class="com.yty.spring.service.OrderService">
+        <property name="orderDao" ref="orderDaoBean"/>
+    </bean>
+
+    <!--inside Bean-->
+    <bean id="orderServiceBean2" class="com.yty.spring.service.OrderService">
+        <property name="orderDao">
+            <bean class="com.yty.spring.dao.OrderDao"/>
+        </property>
+    </bean>
+
+    <!--basic data type set inject-->
+    <bean id="userBean" class="com.yty.spring.bean.User">
+        <!--use value attribute-->
+        <property name="name" value="zhangsan"/>
+        <property name="age" value="15"/>
+        <property name="password" value="12345678"/>
+    </bean>
+    <!--Simple data type test-->
+    <bean id="simpleValueTypeBean" class="com.yty.spring.bean.SimpleValueType">
+        <property name="age" value="15"/>
+        <property name="age2" value="16"/>
+        <property name="c" value="c"/>
+        <property name="c2" value="d"/>
+        <property name="flag" value="true"/>
+        <property name="flag2" value="false"/>
+        <property name="season" value="SUMMER"/>
+        <property name="clazz" value="com.yty.spring.bean.User"/>
+        <property name="birthday" value="Fri Mar 31 11:06:39 CDT 2023"/>
+    </bean>
+
+    <!--spring datasource management-->
+    <bean id="myDataSourceBean" class="com.yty.spring.jdbc.MyDataSource">
+        <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/spring6"/>
+        <property name="username" value="root"/>
+        <property name="password" value="12345678"/>
+    </bean>
+</beans>
