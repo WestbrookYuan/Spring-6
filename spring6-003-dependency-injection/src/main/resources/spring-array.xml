@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="woman1" class="com.yty.spring.bean.Woman">
+        <property name="name" value="hua"/>
+    </bean>
+    <bean id="woman2" class="com.yty.spring.bean.Woman">
+        <property name="name" value="hong"/>
+    </bean>
+    <bean id="woman3" class="com.yty.spring.bean.Woman">
+        <property name="name" value="lee"/>
+    </bean>
+    <bean id="yuQianBean" class="com.yty.spring.bean.YuQian">
+        <property name="hobbies">
+            <array>
+                <value>smoke</value>
+                <value>drink</value>
+                <value>haircut</value>
+            </array>
+        </property>
+        <property name="womenFriends">
+            <array>
+                <ref bean="woman1"/>
+                <ref bean="woman2"/>
+                <ref bean="woman3"/>
+            </array>
+        </property>
+    </bean>
+</beans>

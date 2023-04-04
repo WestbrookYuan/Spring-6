@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="orderDao" class="com.yty.spring.dao.OrderDao"/>-->
+<!--    <bean id="orderService" class="com.yty.spring.service.OrderService">-->
+<!--        <property name="orderDao" ref="orderDao"/>-->
+<!--    </bean>-->
+<!--    根据名字进行自动装配-->
+    <bean id="orderDao" class="com.yty.spring.dao.OrderDao"/>
+    <bean id="orderService" class="com.yty.spring.service.OrderService" autowire="byName"/>
+
+    <bean class="com.yty.spring.dao.Impl.MySQLDaoImpl"/>
+    <bean class="com.yty.spring.dao.Impl.OracleDaoImpl"/>
+    <bean id="customService" class="com.yty.spring.service.Impl.CustomerServiceImpl" autowire="byType"/>
+</beans>

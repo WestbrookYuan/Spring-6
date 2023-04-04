@@ -41,7 +41,7 @@
     <!--spring datasource management-->
     <bean id="myDataSourceBean" class="com.yty.spring.jdbc.MyDataSource">
         <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/Mybatis"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/spring6"/>
         <property name="username" value="root"/>
         <property name="password" value="12345678"/>
     </bean>

@@ -5,6 +5,8 @@
       <configuration>
         <fileset id="fileset" name="Spring" removed="false">
           <file>file://$MODULE_DIR$/spring6-003-dependency-injection/src/main/resources/Spring.xml</file>
+          <file>file://$MODULE_DIR$/spring6-003-dependency-injection/src/main/resources/cascade.xml</file>
+          <file>file://$MODULE_DIR$/spring6-003-dependency-injection/src/main/resources/spring-collection.xml</file>
         </fileset>
       </configuration>
     </facet>
