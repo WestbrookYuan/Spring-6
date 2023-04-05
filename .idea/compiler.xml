@@ -9,6 +9,7 @@
         <module name="spring6-001-revelation" />
         <module name="spring6-003-dependency-injection" />
         <module name="spring6-002-first" />
+        <module name="spring6-004-scope" />
       </profile>
     </annotationProcessing>
   </component>
