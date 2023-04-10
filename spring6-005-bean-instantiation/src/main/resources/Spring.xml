@@ -3,4 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="sb" class="com.yty.spring6.bean.SpringBean"/>
+
+    <bean id="starBean" class="com.yty.spring6.bean.StarFactory" factory-method="get"/>
+
+    <bean id="gunFactory" class="com.yty.spring6.bean.GunFactory"/>
+    <bean id="gun" factory-bean="gunFactory" factory-method="get"/>
+    <bean id="personBean" class="com.yty.spring6.bean.PersonFactoryBean"/>
+
 </beans>
