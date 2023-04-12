@@ -8,6 +8,30 @@
 
     <bean id="gunFactory" class="com.yty.spring6.bean.GunFactory"/>
     <bean id="gun" factory-bean="gunFactory" factory-method="get"/>
+
     <bean id="personBean" class="com.yty.spring6.bean.PersonFactoryBean"/>
+
+
+    <!--inject Date type parameter-->
+    <bean id="studentBean" class="com.yty.spring6.bean.Student">
+        <!--simple data type: strict input format-->
+        <!--<property name="birth" value="Mon Oct 10 14:30:26 CST 2002"/>-->
+        <!--not set as a simple data type-->
+        <property name="birth">
+            <!--only can get current system time-->
+            <bean class="java.util.Date"/>
+        </property>
+    </bean>
+
+
+    <!--use DataFactoryBean-->
+    <bean id="birthdayBean"  class="com.yty.spring6.bean.DateFactoryBean">
+        <constructor-arg name="strDate" value="1999-11-14"/>
+    </bean>
+    <bean id="studentBeanByFactory" class="com.yty.spring6.bean.Student">
+        <property name="birth" ref="birthdayBean"/>
+    </bean>
+
+
 
 </beans>
