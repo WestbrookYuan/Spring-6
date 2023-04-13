@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--配置Bean后处理器，将作用于配置文件中所有的Bean-->
+    <bean class="com.yty.spring6.bean.LogBeanPostProcessor"/>
+    <!--需要手动指定init、destroy方法-->
+    <bean id="userBean" class="com.yty.spring6.bean.User" init-method="initBean" destroy-method="destroyBean" scope="singleton">
+        <property name="name" value="wjs"/>
+    </bean>
+
+</beans>

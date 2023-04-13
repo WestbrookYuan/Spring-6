@@ -66,4 +66,10 @@ com.yty.spring6.bean.SpringBean@30ee2816
       
       ```
 
-9. 
+
+
+### Spring在bean的不同作用域下不同的管理方式
+
+1. Spring只对Singleton的Bean做完整的生命周期管理
+2. 如果是prototype的Bean，spring只负责将该Bean初始化，当客户端代码获取到Spring获取的Bean之后，就不再管理，不在追踪其生命周期。
+

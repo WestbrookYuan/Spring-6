@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Spring6.iml" filepath="$PROJECT_DIR$/Spring6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring6-006-bean-lifecycle.iml" filepath="$PROJECT_DIR$/Spring6-006-bean-lifecycle.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6-002-first.iml" filepath="$PROJECT_DIR$/spring6-002-first.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6-003-dependency-injection.iml" filepath="$PROJECT_DIR$/spring6-003-dependency-injection.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6-005-bean-instantiation.iml" filepath="$PROJECT_DIR$/spring6-005-bean-instantiation.iml" />
