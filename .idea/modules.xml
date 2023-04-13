@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring6-002-first.iml" filepath="$PROJECT_DIR$/spring6-002-first.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6-003-dependency-injection.iml" filepath="$PROJECT_DIR$/spring6-003-dependency-injection.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6-005-bean-instantiation.iml" filepath="$PROJECT_DIR$/spring6-005-bean-instantiation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring6-007-circle-dependency.iml" filepath="$PROJECT_DIR$/spring6-007-circle-dependency.iml" />
     </modules>
   </component>
 </project>

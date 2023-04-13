@@ -11,9 +11,11 @@
         <module name="spring6-003-dependency-injection" />
         <module name="spring6-002-first" />
         <module name="spring6-005-bean-instantiation" />
+        <module name="review-reflect" />
         <module name="Spring6-006-bean-lifecycle" />
         <module name="spring6-001-revelation" />
         <module name="spring6-004-scope" />
+        <module name="spring6-007-circle-dependency" />
       </profile>
     </annotationProcessing>
   </component>

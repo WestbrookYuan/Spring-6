@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--setter+singleton-->
+    <bean id="husband" class="com.yty.spring6.bean.Husband" scope="singleton">
+        <property name="name" value="wjs"/>
+        <property name="wife" ref="wife"/>
+    </bean>
+    <bean id="wife" class="com.yty.spring6.bean.Wife" scope="singleton">
+        <property name="name" value="sbb"/>
+        <property name="husband" ref="husband"/>
+    </bean>
+
+<!--setter+prototype-->
+<!--    <bean id="husband" class="com.yty.spring6.bean.Husband" scope="prototype">-->
+<!--        <property name="name" value="wjs"/>-->
+<!--        <property name="wife" ref="wife"/>-->
+<!--    </bean>-->
+<!--    <bean id="wife" class="com.yty.spring6.bean.Wife" scope="prototype">-->
+<!--        <property name="name" value="sbb"/>-->
+<!--        <property name="husband" ref="husband"/>-->
+<!--    </bean>-->
+</beans>

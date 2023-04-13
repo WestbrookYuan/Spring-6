@@ -150,5 +150,18 @@ public class LogBeanPostProcessor implements BeanPostProcessor {
 
 ### 自己new的对象纳入Spring管理
 
+```java
+    @Test
+    public void testRegisterBean(){
+        Student student = new Student();
+        System.out.println(student);
+        DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
+        factory.registerSingleton("studentBean", student);
+        Student studentBean = factory.getBean("studentBean", Student.class);
+        System.out.println(studentBean);
+        System.out.println(studentBean.equals(student));
+    }
+```
+
 
 
