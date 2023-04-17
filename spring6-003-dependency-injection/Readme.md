@@ -305,8 +305,7 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
               <bean id="customService" class="com.yty.spring.service.Impl.CustomerServiceImpl" autowire="byType"/>
           ```
 
-       2. 
-
+          
 
 
 

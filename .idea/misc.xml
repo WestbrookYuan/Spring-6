@@ -14,6 +14,8 @@
         <option value="$PROJECT_DIR$/Spring6-006-bean-lifecycle/pom.xml" />
         <option value="$PROJECT_DIR$/spring6-007-circle-dependency/pom.xml" />
         <option value="$PROJECT_DIR$/review-reflect/pom.xml" />
+        <option value="$PROJECT_DIR$/myspring/pom.xml" />
+        <option value="$PROJECT_DIR$/myspring-test/pom.xml" />
       </list>
     </option>
   </component>
