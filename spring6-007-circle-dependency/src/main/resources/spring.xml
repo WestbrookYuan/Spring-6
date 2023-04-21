@@ -4,21 +4,21 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--setter+singleton-->
     <bean id="husband" class="com.yty.spring6.bean.Husband" scope="singleton">
-        <property name="name" value="wjs"/>
-        <property name="wife" ref="wife"/>
+        <property realName="realName" value="wjs"/>
+        <property realName="wife" ref="wife"/>
     </bean>
     <bean id="wife" class="com.yty.spring6.bean.Wife" scope="singleton">
-        <property name="name" value="sbb"/>
-        <property name="husband" ref="husband"/>
+        <property realName="realName" value="sbb"/>
+        <property realName="husband" ref="husband"/>
     </bean>
 
 <!--setter+prototype-->
 <!--    <bean id="husband" class="com.yty.spring6.bean.Husband" scope="prototype">-->
-<!--        <property name="name" value="wjs"/>-->
-<!--        <property name="wife" ref="wife"/>-->
+<!--        <property realName="realName" value="wjs"/>-->
+<!--        <property realName="wife" ref="wife"/>-->
 <!--    </bean>-->
 <!--    <bean id="wife" class="com.yty.spring6.bean.Wife" scope="prototype">-->
-<!--        <property name="name" value="sbb"/>-->
-<!--        <property name="husband" ref="husband"/>-->
+<!--        <property realName="realName" value="sbb"/>-->
+<!--        <property realName="husband" ref="husband"/>-->
 <!--    </bean>-->
 </beans>

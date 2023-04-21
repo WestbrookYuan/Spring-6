@@ -6,7 +6,7 @@
     <repositories>
         <repository>
             <id>repository.spring.milestone</id>
-            <name>Spring Milestone Repository</name>
+            <realName>Spring Milestone Repository</realName>
             <url>https://repo.spring.io/milestone</url>
         </repository>
     </repositories>
@@ -39,7 +39,7 @@
 
 ### Spring程序的细节
 
-1. 重复Bean id问题：报错 Configuration problem: **Bean name 'userBean' is already used in this <beans> element**
+1. 重复Bean id问题：报错 Configuration problem: **Bean realName 'userBean' is already used in this <beans> element**
    **Offending resource: class path resource [spring.xml]**
 
 2. 如果id不存在：会报错返回异常：**No bean named 'date' available**
@@ -138,7 +138,7 @@
 
     <appenders>
         <!--输出日志信息到控制台-->
-        <console name="spring6log" target="SYSTEM_OUT">
+        <console realName="spring6log" target="SYSTEM_OUT">
             <!--控制日志输出的格式-->
             <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss SSS} [%t] %-3level %logger{1024} - %msg%n"/>
         </console>

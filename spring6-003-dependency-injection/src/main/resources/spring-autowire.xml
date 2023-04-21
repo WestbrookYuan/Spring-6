@@ -5,7 +5,7 @@
 
 <!--    <bean id="orderDao" class="com.yty.spring.dao.OrderDao"/>-->
 <!--    <bean id="orderService" class="com.yty.spring.service.OrderService">-->
-<!--        <property name="orderDao" ref="orderDao"/>-->
+<!--        <property realName="orderDao" ref="orderDao"/>-->
 <!--    </bean>-->
 <!--    根据名字进行自动装配-->
     <bean id="orderDao" class="com.yty.spring.dao.OrderDao"/>

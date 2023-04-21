@@ -10,14 +10,14 @@
 
 ```java
 public class User {
-    private String name;
+    private String realName;
     public User(){
         System.out.println("1.无参构造");
     }
 
-    public void setName(String name) {
+    public void setName(String realName) {
         System.out.println("2.给Bean赋值");
-        this.name = name;
+        this.realName = realName;
     }
     public void initBean(){
         System.out.println("3.初始化bean");
@@ -46,7 +46,7 @@ public class TestBeanLifecycle {
 ```xml
 <!--需要手动指定init、destroy方法-->    
 <bean id="userBean" class="com.yty.spring6.bean.User" init-method="initBean" destroy-method="destroyBean">
-        <property name="name" value="wjs"/>
+        <property realName="realName" value="wjs"/>
     </bean>
 ```
 

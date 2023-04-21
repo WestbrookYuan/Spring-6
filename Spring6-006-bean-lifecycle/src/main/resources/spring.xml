@@ -7,7 +7,7 @@
     <bean class="com.yty.spring6.bean.LogBeanPostProcessor"/>
     <!--需要手动指定init、destroy方法-->
     <bean id="userBean" class="com.yty.spring6.bean.User" init-method="initBean" destroy-method="destroyBean" scope="singleton">
-        <property name="name" value="wjs"/>
+        <property realName="realName" value="wjs"/>
     </bean>
 
 </beans>

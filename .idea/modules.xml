@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/spring6-003-dependency-injection.iml" filepath="$PROJECT_DIR$/spring6-003-dependency-injection.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6-005-bean-instantiation.iml" filepath="$PROJECT_DIR$/spring6-005-bean-instantiation.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6-007-circle-dependency.iml" filepath="$PROJECT_DIR$/spring6-007-circle-dependency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring6-008-Ioc-annotation.iml" filepath="$PROJECT_DIR$/spring6-008-Ioc-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring6-009-jdbc.iml" filepath="$PROJECT_DIR$/spring6-009-jdbc.iml" />
     </modules>
   </component>
 </project>

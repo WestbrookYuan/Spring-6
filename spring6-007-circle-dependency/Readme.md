@@ -17,7 +17,7 @@
 
 Caused by: org.springframework.beans.factory.BeanCurrentlyInCreationException: 
 
-Error creating bean with name 'husband': 
+Error creating bean with realName 'husband': 
 
 Requested bean is currently in creation: Is there an unresolvable circular reference?
 
@@ -31,7 +31,7 @@ Requested bean is currently in creation: Is there an unresolvable circular refer
 
 Caused by: org.springframework.beans.factory.BeanCurrentlyInCreationException: 
 
-Error creating bean with name 'husband': 
+Error creating bean with realName 'husband': 
 
 Requested bean is currently in creation: Is there an unresolvable circular reference?
 

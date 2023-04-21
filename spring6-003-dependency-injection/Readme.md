@@ -5,17 +5,17 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
 ### Set注入
 
 1. 在service中实现一个set方法
-2. 想让spring调用set方法，要在service的bean配置中加入子标签， name="userDao"，调用的是Set方法而**不是**类名
+2. 想让spring调用set方法，要在service的bean配置中加入子标签， realName="userDao"，调用的是Set方法而**不是**类名
 
 ```xml
 
     <bean class="com.yty.spring.dao.Impl.MySQLDaoImpl" id="userDaoBean"/>
     <bean class="com.yty.spring.service.Impl.UserServiceImpl" id="userServiceBean">
         <!-- configure property child tag
-             name set method without "set" and lower first letter
+             realName set method without "set" and lower first letter
              SetUserDao to userDao
              ref: id of the Dao bean-->
-        <property name="userDao" ref="userDaoBean"/>
+        <property realName="userDao" ref="userDaoBean"/>
     </bean>
 ```
 
@@ -38,16 +38,16 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
 
     <bean id="customerServiceBean2" class="com.yty.spring.service.Impl.CustomerServiceImpl">
         <!--constructor injection
-            name: attribute name in construct method(can be finished IDEA)
+            realName: attribute realName in construct method(can be finished IDEA)
             ref: bean id-->
-        <constructor-arg name="mySQLDao" ref="MySQLDaoBean"/>
-        <constructor-arg name="oracleDao" ref="OracleDaoBean"/>
+        <constructor-arg realName="mySQLDao" ref="MySQLDaoBean"/>
+        <constructor-arg realName="oracleDao" ref="OracleDaoBean"/>
     </bean>
 
 <!-- or -->
     <bean id="customerServiceBean3" class="com.yty.spring.service.Impl.CustomerServiceImpl">
         <!--constructor injection
-            can be used without name or id
+            can be used without realName or id
             ref: bean id-->
         <constructor-arg ref="MySQLDaoBean"/>
         <constructor-arg  ref="OracleDaoBean"/>
@@ -66,13 +66,13 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
    
        <!--if using ref: outside Bean-->
        <bean id="orderServiceBean" class="com.yty.spring.service.OrderService">
-           <property name="orderDao" ref="orderDaoBean"/>
+           <property realName="orderDao" ref="orderDaoBean"/>
        </bean>
    
        <!--inside Bean-->
        <bean id="orderServiceBean2" class="com.yty.spring.service.OrderService">
        <!--property can include bean tag to use inside bean-->
-           <property name="orderDao">
+           <property realName="orderDao">
                <bean class="com.yty.spring.dao.OrderDao"/>
            </property>
        </bean>
@@ -86,9 +86,9 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
           <!--basic data type set inject-->
           <bean id="userBean" class="com.yty.spring.bean.User">
               <!--use value attribute-->
-              <property name="name" value="zhangsan"/>
-              <property name="age" value="15"/>
-              <property name="password" value="12345678"/>
+              <property realName="realName" value="zhangsan"/>
+              <property realName="age" value="15"/>
+              <property realName="password" value="12345678"/>
           </bean>
       ```
 
@@ -122,11 +122,11 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
 
    ```xml
        <bean id="studentBean" class="com.yty.spring.bean.Student">
-           <property name="name" value="zhangsan" />
-           <property name="clazz" ref="clazzBean" />
-           <property name="clazz.name" value="NZ 172"/>
+           <property realName="realName" value="zhangsan" />
+           <property realName="clazz" ref="clazzBean" />
+           <property realName="clazz.realName" value="NZ 172"/>
          <!--use getClazz()
-              name="clazz.name equals to getClazz().setName()-->
+              realName="clazz.realName equals to getClazz().setName()-->
        </bean>
    ```
 
@@ -137,7 +137,7 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
       1. 简单数据类型：使用value
 
          ```xml
-                 <property name="hobbies">
+                 <property realName="hobbies">
                      <array>
                          <value>smoke</value>
                          <value>drink</value>
@@ -149,7 +149,7 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
       2. 复杂数据类型：使用ref
 
          ```xml
-                 <property name="womenFriends">
+                 <property realName="womenFriends">
                      <array>
                          <ref bean="woman1"/>
                          <ref bean="woman2"/>
@@ -163,7 +163,7 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
    ```xml
        <bean id="personBean" class="com.yty.spring.bean.Person">
    
-           <property name="names">
+           <property realName="names">
                <list>
                    <value>zhangsan</value>
                    <value>lisi</value>
@@ -172,7 +172,7 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
                </list>
            </property>
    
-           <property name="addresses">
+           <property realName="addresses">
                <set>
                    <value>MO</value>
                    <value>NM</value>
@@ -180,7 +180,7 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
                    <value>NY</value>
                </set>
            </property>
-           <property name="phones">
+           <property realName="phones">
                <map>
                    <!--simple data type-->
                    <entry key="1" value="110"/>
@@ -191,7 +191,7 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
                </map>
            </property>
          
-           <property name="properties">
+           <property realName="properties">
                <props>
                    <prop key="driver">com.mysql.cj.jdbc.Driver</prop>
                    <prop key="url">jdbc:mysql://localhost:3306/spring6</prop>
@@ -216,7 +216,7 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
    2. 手动注入null：注入一个null
 
       ```xml
-              <property name="name">
+              <property realName="realName">
                   <null/>
               </property>
       ```
@@ -224,11 +224,11 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
    3. 有value属性但不放置内容：添加一个空串，可以调用String的方法
 
       ```xml
-              <property name="name">
+              <property realName="realName">
                   <value/>
               </property>
               
-              <property name="name" value=""/>
+              <property realName="realName" value=""/>
       ```
 
 8. 注入特殊符号
@@ -237,7 +237,7 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
 
       ```xml
           <bean id="mathBean" class="com.yty.spring.bean.MathBean">
-              <property name="result" value="2 &lt; 3"/>
+              <property realName="result" value="2 &lt; 3"/>
           </bean>
       ```
 
@@ -256,7 +256,7 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
 
       ```xml
           <bean id="birthBean" class="java.util.Date"/>
-          <bean id="dogBean" class="com.yty.spring.bean.Dog" p:name="Syb" p:age="25" p:birth-ref="birthBean"/>
+          <bean id="dogBean" class="com.yty.spring.bean.Dog" p:realName="Syb" p:age="25" p:birth-ref="birthBean"/>
       ```
 
 10. C命名空间注入（简化构造注入）
@@ -264,7 +264,7 @@ service调用Dao的方法，此时由于我们试图实现依赖倒置原则（D
     ```xml
     xmlns:c="http://www.springframework.org/schema/c"
     
-        <bean id="peopleBean" class="com.yty.spring.bean.People" c:name="yty" c:sex="1" c:age="23"/>
+        <bean id="peopleBean" class="com.yty.spring.bean.People" c:realName="yty" c:sex="1" c:age="23"/>
     ```
 
 11. util命名空间

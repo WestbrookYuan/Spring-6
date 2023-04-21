@@ -48,15 +48,15 @@
    <beans>
    
        <bean id="user" class="com.yty.myspring.bean.User">
-           <property name="name" value="zhangsan"></property>
-           <property name="age" value="24"></property>
+           <property realName="realName" value="zhangsan"></property>
+           <property realName="age" value="24"></property>
        </bean>
    
        <bean id="userDaoBean" class="com.yty.myspring.bean.UserDao">
        </bean>
    
        <bean id="userService" class="com.yty.myspring.bean.UserService">
-           <property name="userDao" ref="userDaoBean"></property>
+           <property realName="userDao" ref="userDaoBean"></property>
        </bean>
    
    </beans>

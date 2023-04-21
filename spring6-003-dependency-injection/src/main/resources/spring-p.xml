@@ -4,5 +4,5 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="birthBean" class="java.util.Date"/>
-    <bean id="dogBean" class="com.yty.spring.bean.Dog" p:name="Syb" p:age="25" p:birth-ref="birthBean"/>
+    <bean id="dogBean" class="com.yty.spring.bean.Dog" p:realName="Syb" p:age="25" p:birth-ref="birthBean"/>
 </beans>

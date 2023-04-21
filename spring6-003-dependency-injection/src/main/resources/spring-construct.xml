@@ -14,15 +14,15 @@
 
     <bean id="customerServiceBean2" class="com.yty.spring.service.Impl.CustomerServiceImpl">
         <!--constructor injection
-            name: attribute name in construct method(can be finished IDEA)
+            realName: attribute realName in construct method(can be finished IDEA)
             ref: bean id-->
-        <constructor-arg name="mySQLDao" ref="MySQLDaoBean"/>
-        <constructor-arg name="oracleDao" ref="OracleDaoBean"/>
+        <constructor-arg realName="mySQLDao" ref="MySQLDaoBean"/>
+        <constructor-arg realName="oracleDao" ref="OracleDaoBean"/>
     </bean>
 
     <bean id="customerServiceBean3" class="com.yty.spring.service.Impl.CustomerServiceImpl">
         <!--constructor injection
-            can be used without name or id
+            can be used without realName or id
             ref: bean id
             spring can finish this according to the type of param-->
         <constructor-arg ref="MySQLDaoBean"/>

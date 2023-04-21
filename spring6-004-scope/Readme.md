@@ -50,7 +50,7 @@ com.yty.spring6.bean.SpringBean@30ee2816
 
       ```xml
           <bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
-              <property name="scopes">
+              <property realName="scopes">
                   <map>
                       <entry key="myThread">
                           <bean class="org.springframework.context.support.SimpleThreadScope"/>

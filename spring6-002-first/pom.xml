@@ -11,7 +11,7 @@
     <repositories>
         <repository>
             <id>repository.spring.milestone</id>
-            <name>Spring Milestone Repository</name>
+            <realName>Spring Milestone Repository</realName>
             <url>https://repo.spring.io/milestone</url>
         </repository>
     </repositories>

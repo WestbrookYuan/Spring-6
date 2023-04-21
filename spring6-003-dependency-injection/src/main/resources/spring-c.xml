@@ -3,6 +3,6 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
        xmlns:c="http://www.springframework.org/schema/c">
-    <bean id="peopleBean" class="com.yty.spring.bean.People" c:name="yty" c:sex="1" c:age="23"/>
+    <bean id="peopleBean" class="com.yty.spring.bean.People" c:realName="yty" c:sex="1" c:age="23"/>
 
 </beans>

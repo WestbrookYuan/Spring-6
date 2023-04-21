@@ -6,10 +6,10 @@
     <bean class="com.yty.spring.dao.Impl.MySQLDaoImpl" id="userDaoBean"/>
     <bean class="com.yty.spring.service.Impl.UserServiceImpl" id="userServiceBean">
         <!-- configure property child tag
-             name set method without "set" and lower first letter
+             realName set method without "set" and lower first letter
              SetUserDao to userDao
              ref: id of the Dao bean-->
-        <property name="userDao" ref="userDaoBean"/>
+        <property realName="userDao" ref="userDaoBean"/>
     </bean>
 
 </beans>
