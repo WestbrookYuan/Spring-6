@@ -7,7 +7,7 @@
         <constructor-arg index="1" ref="w"/>
     </bean>
     <bean id="w" class="com.yty.spring6.bean2.Wife" scope="singleton">
-        <constructor-arg realName="realName" value="sbb"/>
-        <constructor-arg realName="husband" ref="h"/>
+        <constructor-arg name="name" value="sbb"/>
+        <constructor-arg name="husband" ref="h"/>
     </bean>
 </beans>

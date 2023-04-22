@@ -3,9 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="studentBean" class="com.yty.spring.bean.Student">
-        <property realName="realName" value="zhangsan" />
-        <property realName="clazz" ref="clazzBean" />
-        <property realName="clazz.realName" value="NZ 172"/>
+        <property name="name" value="zhangsan" />
+        <property name="clazz" ref="clazzBean" />
+        <property name="clazz.realName" value="NZ 172"/>
     </bean>
     <bean id="clazzBean" class="com.yty.spring.bean.Clazz" />
 

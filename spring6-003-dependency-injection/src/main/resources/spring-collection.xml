@@ -5,7 +5,7 @@
 
     <bean id="personBean" class="com.yty.spring.bean.Person">
 
-        <property realName="names">
+        <property name="names">
             <list>
                 <value>zhangsan</value>
                 <value>lisi</value>
@@ -14,7 +14,7 @@
             </list>
         </property>
 
-        <property realName="addresses">
+        <property name="addresses">
             <set>
                 <value>MO</value>
                 <value>NM</value>
@@ -22,7 +22,7 @@
                 <value>NY</value>
             </set>
         </property>
-        <property realName="phones">
+        <property name="phones">
             <map>
                 <!--simple data type-->
                 <entry key="1" value="110"/>
@@ -30,7 +30,7 @@
                 <entry key="3" value="120"/>
             </map>
         </property>
-        <property realName="properties">
+        <property name="properties">
             <props>
                 <prop key="driver">com.mysql.cj.jdbc.Driver</prop>
                 <prop key="url">jdbc:mysql://localhost:3306/spring6</prop>
@@ -40,15 +40,15 @@
         </property>
     </bean>
     <bean id="catBean" class="com.yty.spring.bean.Cat">
-        <property realName="realName">
+        <property name="name">
             <value/>
         </property>
-        <property realName="age" value=""/>
+        <property name="age" value=""/>
     </bean>
 
     <bean id="mathBean" class="com.yty.spring.bean.MathBean">
-<!--        <property realName="result" value="2 &lt; 3"/>-->
-        <property realName="result">
+<!--        <property name="result" value="2 &lt; 3"/>-->
+        <property name="result">
             <value><![CDATA[
                 2 < 3
             ]]></value>

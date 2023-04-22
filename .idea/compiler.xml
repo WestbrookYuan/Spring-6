@@ -9,6 +9,7 @@
         <module name="simple-factory" />
         <module name="spring6-002-first" />
         <module name="spring6-005-bean-instantiation" />
+        <module name="dynamic-proxy-jdk" />
         <module name="spring6-009-jdbc" />
         <module name="spring6-008-Ioc-annotation" />
         <module name="spring6-004-scope" />
@@ -20,6 +21,8 @@
         <module name="review-reflect" />
         <module name="Spring6-006-bean-lifecycle" />
         <module name="spring6-001-revelation" />
+        <module name="static-proxy" />
+        <module name="dynamic-proxy-cglib" />
         <module name="spring6-007-circle-dependency" />
       </profile>
     </annotationProcessing>

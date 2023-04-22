@@ -4,23 +4,23 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="woman1" class="com.yty.spring.bean.Woman">
-        <property realName="realName" value="hua"/>
+        <property name="name" value="hua"/>
     </bean>
     <bean id="woman2" class="com.yty.spring.bean.Woman">
-        <property realName="realName" value="hong"/>
+        <property name="name" value="hong"/>
     </bean>
     <bean id="woman3" class="com.yty.spring.bean.Woman">
-        <property realName="realName" value="lee"/>
+        <property name="name" value="lee"/>
     </bean>
     <bean id="yuQianBean" class="com.yty.spring.bean.YuQian">
-        <property realName="hobbies">
+        <property name="hobbies">
             <array>
                 <value>smoke</value>
                 <value>drink</value>
                 <value>haircut</value>
             </array>
         </property>
-        <property realName="womenFriends">
+        <property name="womenFriends">
             <array>
                 <ref bean="woman1"/>
                 <ref bean="woman2"/>
