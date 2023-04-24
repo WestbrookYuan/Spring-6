@@ -17,7 +17,7 @@ public class TimerMethodInterceptor implements MethodInterceptor {
         long begin = System.currentTimeMillis();
         // 目标方法
         Object retValue = methodProxy.invokeSuper(target, objects);
-        //后面增强
+        // 后面增强
         long end = System.currentTimeMillis();
         System.out.println("time consume: " + (end - begin));
         return retValue;

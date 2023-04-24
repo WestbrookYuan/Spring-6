@@ -11,6 +11,8 @@
       <module fileurl="file://$PROJECT_DIR$/spring6-007-circle-dependency.iml" filepath="$PROJECT_DIR$/spring6-007-circle-dependency.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6-008-Ioc-annotation.iml" filepath="$PROJECT_DIR$/spring6-008-Ioc-annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6-009-jdbc.iml" filepath="$PROJECT_DIR$/spring6-009-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring6-010-spring-aspectj-aop-annotation.iml" filepath="$PROJECT_DIR$/spring6-010-spring-aspectj-aop-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring6-011-spring-aspectj-xml.iml" filepath="$PROJECT_DIR$/spring6-011-spring-aspectj-xml.iml" />
     </modules>
   </component>
 </project>

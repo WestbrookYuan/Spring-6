@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring6-011-spring-aspectj-xml" />
         <module name="simple-factory" />
+        <module name="aop-view" />
         <module name="spring6-002-first" />
+        <module name="spring6-012-aop-realapp" />
         <module name="spring6-005-bean-instantiation" />
         <module name="dynamic-proxy-jdk" />
         <module name="spring6-009-jdbc" />
@@ -18,6 +21,7 @@
         <module name="myspring-test" />
         <module name="spring6-003-dependency-injection" />
         <module name="myspring" />
+        <module name="spring6-010-spring-aspectj-aop-annotation" />
         <module name="review-reflect" />
         <module name="Spring6-006-bean-lifecycle" />
         <module name="spring6-001-revelation" />

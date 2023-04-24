@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Spring6-006-bean-lifecycle/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring6-006-bean-lifecycle/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aop-view/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aop-view/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dynamic-proxy-cglib/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dynamic-proxy-cglib/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dynamic-proxy-jdk/src/main/java" charset="UTF-8" />
@@ -35,6 +37,12 @@
     <file url="file://$PROJECT_DIR$/spring6-008-Ioc-annotation/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring6-009-jdbc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring6-009-jdbc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-010-spring-aspectj-aop-annotation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-010-spring-aspectj-aop-annotation/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-011-spring-aspectj-xml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-011-spring-aspectj-xml/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-012-aop-realapp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring6-012-aop-realapp/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/static-proxy/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/static-proxy/src/main/resources" charset="UTF-8" />
   </component>
