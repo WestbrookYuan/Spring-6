@@ -26,7 +26,17 @@
         <option value="$PROJECT_DIR$/spring6-010-spring-aspectj-aop-annotation/pom.xml" />
         <option value="$PROJECT_DIR$/spring6-011-spring-aspectj-xml/pom.xml" />
         <option value="$PROJECT_DIR$/spring6-012-aop-realapp/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-013-transaction-bank/pom.xml" />
+        <option value="$PROJECT_DIR$/spring006-014-bank-xml/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-014-transaction-bank-xml/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-015-junit/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-016-spring-mybatis/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/spring006-014-bank-xml/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17" project-jdk-type="JavaSDK">

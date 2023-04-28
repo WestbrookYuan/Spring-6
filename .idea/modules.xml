@@ -13,6 +13,8 @@
       <module fileurl="file://$PROJECT_DIR$/spring6-009-jdbc.iml" filepath="$PROJECT_DIR$/spring6-009-jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6-010-spring-aspectj-aop-annotation.iml" filepath="$PROJECT_DIR$/spring6-010-spring-aspectj-aop-annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring6-011-spring-aspectj-xml.iml" filepath="$PROJECT_DIR$/spring6-011-spring-aspectj-xml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring6-013-transaction-bank.iml" filepath="$PROJECT_DIR$/spring6-013-transaction-bank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring6-014-transaction-bank-xml.iml" filepath="$PROJECT_DIR$/spring6-014-transaction-bank-xml.iml" />
     </modules>
   </component>
 </project>
